@@ -1,10 +1,10 @@
 module ApplicationHelper
-	def tipo_options
-    [
-      Tipo.all.pluck(:nombre)
+	# def tipo_options
+ #    [
+ #      endTipo.all.pluck(:nombre)
       
-    ]
-  end
+ #    ]
+  #end
 
   
 end

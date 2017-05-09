@@ -20,7 +20,9 @@
     <%= f.label :descripcion %>
     <%= f.text_area :descripcion %>
   </div>
-
+  <div class="field">
+    <%= f.select(:tipo,  Tipo.all.collect {|t| [ t.nombre, t.id ] }, { include_blank: 'Seleccionar Tipo de Producto' }) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @fringe.fecha.to_formatted_s(:short) %>
+</p>
+
+<p>
+  <strong>Sueldos hasta:</strong>
+  <%= @fringe.primera_hasta %>
+</p>
+
+<p>
+  <strong>Valor del ticket:</strong>
+  <%= @fringe.primera_precio %>
+</p>
+
+<p>
+  <strong>Sueldos mayores a </strong><%= @fringe.primera_hasta %><strong> y hasta:</strong>
+  <%= @fringe.segunda_hasta %>
+</p>
+
+<p>
+  <strong>Valor del ticket:</strong>
+  <%= @fringe.segunda_precio %>
+</p>
+<p>
+  <strong>Sueldos mayores a </strong><%= @fringe.segunda_hasta %>
+</p>
+<p>
+  <strong>Valor del ticket:</strong>
+  <%= @fringe.tercera_precio %>
+</p>
+
+<%= link_to 'Edit', edit_fringe_path(@fringe) %> |
+<%= link_to 'Back', fringes_path %>

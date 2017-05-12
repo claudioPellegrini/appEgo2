@@ -1,0 +1,50 @@
+<%= form_for(fringe) do |f| %>
+  <% if fringe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fringe.errors.count, "error") %> prohibited this fringe from being saved:</h2>
+
+      <ul>
+      <% fringe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field">
+    <%= f.label :fecha %>
+    <%= f.datetime_select :fecha %>
+  </div> -->
+
+  <div class="field">
+    <%= f.label "Sueldos hasta: " %>
+    <%= f.number_field :primera_hasta, min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Valor de Ticket: " %>
+    <%= f.number_field :primera_precio, min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Sueldos hasta: " %>
+    <%= f.number_field :segunda_hasta, min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Valor de Ticket: " %>
+    <%= f.number_field :segunda_precio, min: 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Sueldos mayores: " %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Valor de Ticket: " %>
+    <%= f.number_field :tercera_precio, min: 0 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

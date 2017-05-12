@@ -1,0 +1,2 @@
+module FringesHelper
+end

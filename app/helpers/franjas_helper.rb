@@ -1,2 +1,0 @@
-module FranjasHelper
-end

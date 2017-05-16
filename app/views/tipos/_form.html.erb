@@ -1,7 +1,7 @@
 <%= form_for(tipo) do |f| %>
   <% if tipo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>
+      <h2>Tenemos <%= pluralize(tipo.errors.count, "error") %>, no se puede guardar este tipo de producto:</h2>
 
       <ul>
       <% tipo.errors.full_messages.each do |message| %>
@@ -22,6 +22,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar Tipo" %>
   </div>
 <% end %>

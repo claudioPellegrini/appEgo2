@@ -1,7 +1,7 @@
 <%= form_for(producto) do |f| %>
   <% if producto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+      <h2>Tenemos <%= pluralize(producto.errors.count, "error") %>, no se puede guardar este producto:</h2>
 
       <ul>
       <% producto.errors.full_messages.each do |message| %>
@@ -29,6 +29,6 @@
     <%= f.number_field :precio, :step => "0.5", min: 0 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar Producto" %>
   </div>
 <% end %>

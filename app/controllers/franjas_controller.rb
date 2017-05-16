@@ -28,7 +28,7 @@ class FranjasController < ApplicationController
 
     respond_to do |format|
       if @franja.save
-        format.html { redirect_to @franja, notice: 'Franja was successfully created.' }
+        format.html { redirect_to @franja, notice: 'La Franja se creo correctamente' }
         format.json { render :show, status: :created, location: @franja }
       else
         format.html { render :new }

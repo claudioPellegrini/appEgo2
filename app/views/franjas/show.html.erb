@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @franja.fecha %>
+</p>
+
+<p>
+  <strong>Primera hasta:</strong>
+  <%= @franja.primera_hasta %>
+</p>
+
+<p>
+  <strong>Primera precio:</strong>
+  <%= @franja.primera_precio %>
+</p>
+
+<p>
+  <strong>Segunda hasta:</strong>
+  <%= @franja.segunda_hasta %>
+</p>
+
+<p>
+  <strong>Segunda precio:</strong>
+  <%= @franja.segunda_precio %>
+</p>
+
+<p>
+  <strong>Tercera precio:</strong>
+  <%= @franja.tercera_precio %>
+</p>
+
+<%= link_to 'Edit', edit_franja_path(@franja) %> |
+<%= link_to 'Back', franjas_path %>

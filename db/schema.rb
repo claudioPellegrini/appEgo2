@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512150424) do
+ActiveRecord::Schema.define(version: 20170515235513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fringes", force: :cascade do |t|
+  create_table "accounts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "kind"
+    t.decimal  "balance"
+    t.string   "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "franjas", force: :cascade do |t|
     t.datetime "fecha"
     t.decimal  "primera_hasta"
     t.decimal  "primera_precio"

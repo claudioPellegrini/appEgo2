@@ -1,0 +1,47 @@
+<%= form_for(franja) do |f| %>
+  <% if franja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(franja.errors.count, "error") %> prohibited this franja from being saved:</h2>
+
+      <ul>
+      <% franja.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.datetime_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :primera_hasta %>
+    <%= f.text_field :primera_hasta %>
+  </div>
+
+  <div class="field">
+    <%= f.label :primera_precio %>
+    <%= f.text_field :primera_precio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :segunda_hasta %>
+    <%= f.text_field :segunda_hasta %>
+  </div>
+
+  <div class="field">
+    <%= f.label :segunda_precio %>
+    <%= f.text_field :segunda_precio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tercera_precio %>
+    <%= f.text_field :tercera_precio %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
